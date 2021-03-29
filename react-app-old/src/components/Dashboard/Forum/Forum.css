@@ -1,0 +1,14 @@
+.Forum {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.ForumContainer {
+    width: 95%;
+    height: 80%;
+    background-color: rebeccapurple;
+    margin: 0 auto;
+    margin-top: 20px;
+}

@@ -1,0 +1,97 @@
+.Stats {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Stats header {
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+  
+  .Stats header .Profile p {
+    font-size: 1.8rem;
+  }
+  
+  .DisplayBox {
+    min-width: 120px;
+    min-height: 50px;
+    background-color: rgb(33,33,33);
+    margin-right: 10px;
+    color: #FFF;
+    padding: 0 15px;
+    font-size: 1.2rem;
+  }
+  
+  .DisplayBox img.Icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .DisplayBox img.Dinar {
+    height: 20px !important;
+  }
+  
+  .HomeContent {
+    width: 100%;
+    align-items:flex-start;
+  
+  }
+  
+  .PlayerDisplay {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #000;
+    height: 100% !important;
+    background-image: url('../../../img/avatar-bg.jpg');
+    background-size: cover;
+  }
+  
+  .PlayerDisplay .PlayerName {
+    background-color: rgb(33,33,33);
+    width: 100%;
+    height: 50px;
+    color: white;
+    flex: 1;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .PlayerDisplay .PlayerAvatar {
+    flex: 5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .PlayerDisplay .PlayerAvatar img {
+    margin: 0 auto;
+  }
+  
+  .PlayerDisplay .PlayerRank {
+    flex: 1;
+    display: flex;
+    background-color: rgb(33,33,33);
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(232, 11, 65);
+  }
+  
+  .PlayerStats {
+    flex: 2;
+    padding: 0 50px;
+  }
+  
+  .StatsContent {
+    height: 100%;
+  }

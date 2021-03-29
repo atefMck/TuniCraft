@@ -1,0 +1,133 @@
+.container {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(27, 34, 44, .9);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_form {
+    background-color: var(--bg-black-medium);
+    border: 8px solid var(--red-dark);
+}
+
+.container_form .form_header {
+    background-color: var(--red-dark);
+    padding: .7rem .2rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    min-height: 18px;
+}
+
+.container_form .form_header .header_close {
+    font-size: 2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .3s;
+}
+
+.container_form .form_header .header_close:hover {
+    color: var(--bg-black-medium);
+    cursor: pointer;
+}
+
+.container_form .form_content {
+    padding: 1.5rem 0;
+}
+
+.container_form h1 {
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.form_inputs {
+    color: var(--white-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    min-height: 140px;
+}
+
+.inputs input {
+    height: 40px;
+    border: 0;
+    background-color: var(--white);
+    padding-left: 1rem;
+    margin-top: 20px;
+}
+
+.inputs input::placeholder {
+    color: #636363;
+    font-size: .8rem;
+}
+
+.inputs a {
+    margin-left: auto;
+    text-decoration: none;
+    font-size: .8rem;
+    margin-top: 5px;
+    color: var(--white-main);
+}
+
+.inputs_remember {
+    color: var(--white-main);
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.inputs_button {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.inputs_button button {
+    background-color: var(--red-dark);
+    color: var(--white-main);
+    border: 0;
+    border-radius: 0;
+    font-size: 1rem;
+    padding: .5rem 5rem;
+    transition: .5s;
+}
+
+.inputs_button button:hover {
+    background-color: var(--red-light);
+    cursor: pointer;
+}
+
+.inputs_register {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.inputs_flex  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 400px;
+}
+
+.dob_label {
+    margin-left: auto;
+    font-size: .8rem;
+    margin-top: 5px;
+    color: var(--white-main);
+}

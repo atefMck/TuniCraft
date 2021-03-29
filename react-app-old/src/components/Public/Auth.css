@@ -1,0 +1,52 @@
+.Form {
+    justify-content: space-around;
+}
+
+.Form h1 {
+    margin-bottom: 0;
+}
+
+.Form form {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: left;
+    max-width: 400px;
+}
+
+.Form form input {
+    background-color: rgb(33,33,33);
+    color: white;
+    padding: 0 5px;
+}
+
+.Form form input:focus {
+    outline: none;
+    background-color: rgb(77,77,77)
+}
+
+.Form form .Remember {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Form form .Remember input {
+    margin: 0;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.Form form .Remember p {
+    margin: 0;
+}
+
+.RegisterForm form {
+    max-width: 800px;
+}
+
+.RegisterForm .RegisterInfo div {
+    display: flex;
+    flex-direction: column;
+}
+
