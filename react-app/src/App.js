@@ -37,7 +37,6 @@ class App extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <div className="MainContainer">
                     <Switch>
                         <Route exact path="/dashboard">
                             <Dashboard />
@@ -49,7 +48,6 @@ class App extends React.Component {
                             <Forum />
                         </Route>
                     </Switch>
-                </div>
             </BrowserRouter>
         );
     }

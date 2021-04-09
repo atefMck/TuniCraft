@@ -1,0 +1,174 @@
+/* || FEATURE STYLES */
+
+.feature {
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature img {
+    width: 300px;
+    border: 5px solid var(--red-medium);
+}
+
+.feature h2 {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    padding: 5px 8px;
+    background-color: var(--red-medium);
+}
+
+.feature p, .feature span {
+    padding: 8px 5px;
+    width: 100%;
+    background-color: var(--red-medium);
+}
+
+.feature span {
+    background-color: var(--white-main);
+    color: var(--red-medium);
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.feature span:hover {
+    color: var(--white-main);
+    background-color: var(--red-medium);
+}
+
+.feature span a {
+    color: var(--red-medium);
+}
+
+/* || POST STYLES */
+
+.post {
+    margin-bottom: 100px;
+}
+
+.post article {
+    display: flex;
+}
+
+.post article img {
+    width: 350px;
+    height: 200px;
+    border: 5px solid var(--red-medium);
+}
+
+.post article div {
+    padding: 0 8px;
+    position: relative;
+}
+
+.post article div h2 {
+    font-size: 22px;
+}
+
+.post article div span {
+    font-size: 14px;
+    color: var(--white-dark);
+}
+
+.post article div span span {
+    color: var(--red-medium);
+}
+
+.post article div p {
+    margin-top: 10px;
+    color: var(--white-main);
+}
+
+.post article div button {
+    padding: 1rem 2rem;
+    width: fit-content;
+    height: fit-content !important;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: skewX(-10deg);
+}
+
+.post.reversed article {
+    flex-direction: row-reverse;
+}
+
+.post.reversed article div button {
+    left: 0;
+}
+
+/* || STORECARD STYLES */
+
+.store_card {
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    color: var(--bg-black-medium);
+    border: 3px solid var(--white);
+    transition: .5s;
+}
+
+.store_card:hover {
+    border-color: var(--red-medium);
+}
+
+.store_card:hover img {
+    filter: none;
+}
+
+.store_card div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.store_card div h3 {
+    position: absolute;
+    color: var(--white);
+    border: 3px solid var(--white);
+    padding: .5rem 1rem;
+    transition: .5s;
+}
+
+.store_card div img {
+    height: 160px;
+    width: 100%;
+    margin: 0 auto;
+    filter: blur(5px);
+    z-index: -1;
+    transition: .5s;
+}
+
+.store_card div:hover h3 {
+    color: var(--red-medium);
+    border-color: var(--red-medium);
+}
+
+.store_card main {
+    padding: .5rem;
+}
+
+.store_card main span {
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--white-dark);
+}
+
+.store_card main h2 {
+    font-size: 18px;
+}
+
+.store_card main button {
+    padding: 1rem 0;
+}
+
+.store_card main p {
+    font-size: 14px;
+}
+

@@ -15,7 +15,7 @@ import BgFixed from 'assets/bg-fixed.jpg'
 const initialState = {
     icons: icons,
     features: [feature, feature, feature, feature] ,
-    posts: [postrev, post, postrev],
+    posts: [post, postrev, post],
     popup: {
         pop: false,
         login: false,
@@ -71,12 +71,10 @@ class Landing extends React.Component {
         return (
             <div className="main_container">
                 {this.state.popup.pop && <Auth login={this.state.popup.login} register={this.state.popup.register} hidePopup={this.hidePopup}/>}
-                <div className="bg_fixed">
-                    <img src={BgFixed} alt="" />
-                </div>
+                <img src={BgFixed} alt="" className="bg_fixed"/>
+
+                {/* Section Intro */}
                 <section className="section_intro">
-                    <div className="video_film">
-                    </div>
                     <video
                         autoPlay
                         muted
@@ -84,133 +82,123 @@ class Landing extends React.Component {
                     >
                         <source src={BgVideo} type="video/mp4"></source>
                     </video>
-                    <nav className="menu_main">
-                        <div className="menu_logo">
-                            <img src={Logo} alt="" />
-                        </div>
-                        <ul className="menu_list">
-                            <li key="1">Home</li>
-                            <li key="2" onClick={() => this.scrollTo(947)}>Play</li>
-                            <li key="3" onClick={() => this.scrollTo(1920)}>News</li>
-                            <li key="4">Forum</li>
-                            <li key="5"><span>25 Players Online</span></li>
+                    <nav>
+                        <img src={Logo} alt="" className="logo_small"/>
+                        <ul>
+                            <li key="1">
+                                <p>Home</p>
+                            </li>
+                            <li key="2" onClick={() => this.scrollTo(947)}>
+                                <p>Play</p>
+                            </li>
+                            <li key="3" onClick={() => this.scrollTo(1920)}>
+                                <p>News</p>
+                            </li>
+                            <li key="4">
+                                <p>Forum</p>
+                            </li>
+                            <li key="5">
+                                <span>25 Players Online</span>
+                            </li>
+                            <li className="list_button" onClick={() => this.showPopup("login")}>
+                                <p>Login</p>
+                            </li>
+                            <li className="list_button" onClick={() => this.showPopup("register")}>
+                                <p>Register</p>
+                            </li>
+                            {this.props.auth &&
+                            <li className="list_button">
+                                <p>Control Panel</p>
+                            </li>
+                            } 
+                            
                         </ul>
-                        {!this.props.auth && 
-                        <div className="menu_auth">
-                            <div className="menu_profile" onClick={() => this.showPopup("login")}>
-                                Login
-                            </div>
-                            <div className="menu_profile menu_register" onClick={() => this.showPopup("register")}>
-                                Register
-                            </div>
-                        </div>
-                        }
-                        {this.props.auth &&
-                        <div className="menu_auth">
-                            <div className="menu_profile menu_panel">
-                                Control Panel
-                            </div>
-                        </div>
-                        } 
                     </nav>
-                    <div className="intro_content">
-                        <h1>The best developed Tunisian minecraft server</h1>
-                        <div>
-                            <p>TUNI<span>CRAFT</span></p>
-                        </div>
-                        <h2>
-                            From gamers to gamers
-                        </h2>
+                    <div>
+                        <h2>The best developed Tunisian minecraft server</h2>
+                        <h1>TUNI<span>CRAFT</span></h1>
+                        <h3>From gamers to gamers</h3>
                     </div>
                 </section>
-                <section className="section_icons">
-                    <h1>Hall of fame</h1>
+
+                {/* Section Icons */}
+                <section className="section section_icons">
+                    <h1 className="section_header">Hall of fame</h1>
                     <ul>
                         {this.state.icons}
                     </ul>
                 </section>
-                <section className="section_play">
-                    <h1 className="section_play_title">How to join</h1>
-                    <div className="section_play_cards">
-                        <div className="howto_card">
+
+                {/* Section Play */}
+                <section className="section section_play">
+                    <h1 className="section_header">How to join</h1>
+                    <ul>
+                        <li>
                             <h1>Download a Launcher</h1>
-                            <div>
-                                <FontAwesomeIcon icon={faDownload} className="howto_icon"/>
-                            </div>
-                            <div className="download_links">
+                            <FontAwesomeIcon icon={faDownload} className="demo_icon"/><br/>
+                            <p>
                                 <a href="https://www.minecraft.net/en-us/download/">Minecraft (Premium)</a><br/>
                                 <a href="https://tlauncher.org/en/">TLauncher (Cracked)</a>
-                            </div>
-                        </div>
-                        <FontAwesomeIcon icon={faArrowRight} className="arrow_icon"/>
-                        <div className="howto_card">
+                            </p>
+                        </li>
+                        {/* <FontAwesomeIcon icon={faArrowRight} className="arrow_right"/> */}
+                        <li>
                             <h1>Register an account</h1>
-                            <div>
-                                <FontAwesomeIcon icon={faUserCircle} className="howto_icon"/>
-                            </div>
+                            <FontAwesomeIcon icon={faUserCircle} className="demo_icon"/>
                             <p>Make an account on our website using this link</p>
-                        </div>
-                        <FontAwesomeIcon icon={faArrowRight} className="arrow_icon"/>
-                        <div className="howto_card">
+                        </li>
+                        {/* <FontAwesomeIcon icon={faArrowRight} className="arrow_right"/> */}
+                        <li>
                             <h1>Create a character</h1>
-                            <div>
-                                <FontAwesomeIcon icon={faUserEdit} className="howto_icon"/>
-                            </div>
+                            <FontAwesomeIcon icon={faUserEdit} className="demo_icon"/>
                             <p>Create a new character in your dashboard</p>
-                        </div>
-                        <FontAwesomeIcon icon={faArrowRight} className="arrow_icon"/>
-                        <div className="howto_card">
+                        </li>
+                        {/* <FontAwesomeIcon icon={faArrowRight} className="arrow_right"/> */}
+                        <li>
                             <h1>Join the fun</h1>
-                            <div>
-                                <FontAwesomeIcon icon={faCrown} className="howto_icon"/>
-                            </div>
+                            <FontAwesomeIcon icon={faCrown} className="demo_icon"/>
                             <p>Start building your empire using this IP: <span>play.tunicraft.me</span></p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </section>
-                <section className="section_info">
-                    <div className="info_features">
+
+                {/* Section Info */}
+                <section className="section section_info">
+                    <div>
                         <header>
-                            <h1>Check out our most recent </h1>
-                            <div className="features_header">
-                                <div className="features_textbox">features</div>
-                                <div className="features_controls">
-                                    <div><FontAwesomeIcon icon={faArrowLeft} className="arrow_icon"/></div>
-                                    <div><FontAwesomeIcon icon={faArrowRight} className="arrow_icon"/></div>
-                                </div>
+                            <h1>Check out our most recent <br></br><div>features</div></h1>
+                            <div>
+                                <FontAwesomeIcon icon={faArrowLeft} className="controls_icon"/>
+                                <FontAwesomeIcon icon={faArrowRight} className="controls_icon"/>
                             </div>
                         </header>
-                        <div className="features_cards_container">
+                        <ul>
                             {this.state.features}
-                        </div>
+                        </ul>
                     </div>
-                    <div className="info_news">
-                        <header>
-                            <h1>What's poppin in the server</h1>
-                            <div className="news_title">Latest News</div>
+                    <div>
+                        <header className="header_right">
+                            <h1>What's poppin in the server<div>Latest News</div></h1>
                         </header>
-                        {this.state.posts}
+                        <ul>
+                            {this.state.posts}
+                        </ul>
+                    </div>
+                </section>
 
-                    </div>
-                </section>
-                <section className="section_footer">
-                    <div className="footer_socials">
-                        <FontAwesomeIcon icon={faFacebookF}/>
-                        <FontAwesomeIcon icon={faInstagram}/>
-                        <FontAwesomeIcon icon={faDiscord}/>
-                        <FontAwesomeIcon icon={faTwitter}/>
-                    </div>
-                    <div className="footer_links">
-                        <h1>Useful links:</h1>
-                        <div>
-                            <p>Terms of servises</p>
-                            <p>Rules and Guides</p>
-                        </div>
-                    </div>
-                    <div className="footer_copyright">
-                        <p>&#169; Copyright 2021 Tunicraft. All rights reserved.</p>
-                    </div>
-                </section>
+                {/* Section Footer */}
+                <footer className="section footer">
+                    <ul>
+                        <li><FontAwesomeIcon icon={faFacebookF}/></li>
+                        <li><FontAwesomeIcon icon={faInstagram}/></li>
+                        <li><FontAwesomeIcon icon={faDiscord}/></li>
+                        <li><FontAwesomeIcon icon={faTwitter}/></li>
+                    </ul>
+                    <h1>Useful links:</h1>
+                    <button>Terms of servises</button>
+                    <button>Rules and Guides</button>
+                    <p>&#169; Copyright 2021 Tunicraft. All rights reserved.</p>
+                </footer>
             </div>
         );
     }

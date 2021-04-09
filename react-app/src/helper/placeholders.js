@@ -7,7 +7,7 @@ import icon5 from 'assets/icon_5.png'
 import icon6 from 'assets/icon_6.png'
 import icon7 from 'assets/icon_7.png'
 
-import { Post, Feature, Person } from 'components/Miscellaneous'
+import { Post, Feature, Person } from 'components'
 
 const hallOfFamePH = {
     'Enderman53': ["a", icon1],
@@ -21,6 +21,7 @@ const hallOfFamePH = {
 const featurePH = {
     title: "Dynamic Map",
     content: "Lorem ipsum dolor sit ametconse ctetur adipiscing elit.",
+    thumbnail: PostImg,
 }
 const postPH = {
     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -30,7 +31,7 @@ const postPH = {
     image: PostImg,
 }
 
-const feature = <Feature title={featurePH.title} content={featurePH.content} />
+const feature = <Feature title={featurePH.title} content={featurePH.content} thumbnail={featurePH.thumbnail}/>
 const post = <Post title={postPH.title} date={postPH.date} author={postPH.author} content={postPH.content} image={postPH.image} type={false} />
 const postrev = <Post title={postPH.title} date={postPH.date} author={postPH.author} content={postPH.content} image={postPH.image} type={true} />
 const icons = Object.keys(hallOfFamePH).map((name) => <Person index={hallOfFamePH[name][0]} name={name} avatar={hallOfFamePH[name][1]} />)

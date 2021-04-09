@@ -1,8 +1,10 @@
 :root {
     --white-main: #FFFAEF;
     --white: #FFFFFF;
+    --black: #000000;
     --white-cream: #FBEBD8;
     --white-dark: #b4b4b4;
+    --white-medium: #dfdfdf;
     --red-light: #E53C38;
     --red-medium: #D11D27;
     --red-dark: #A90011;
@@ -11,6 +13,7 @@
     --bg-red-medium: rgba(209, 29, 39, .95);
     --bg-red-dark: rgb(169,0,17, .9);
     --bg-black-medium: #1b222c;
+    --bg-dark-fade: rgba(0, 0, 0, .5);
 
     --section-padding-tb: 4rem;
 }
@@ -53,6 +56,9 @@ body {
 }
 ol, ul {
 	list-style: none;
+}
+li {
+  list-style: none;
 }
 blockquote, q {
 	quotes: none;
