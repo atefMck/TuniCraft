@@ -1,19 +1,76 @@
 /* || HOME STYLES */
 
 .home {
-    overflow: visible;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2rem 1rem;
+    height: 780px;
+    overflow-y: scroll;
+    color: var(--bg-black-medium);
+    padding: 1rem;
 }
 
-.home ul {
-    overflow: visible;
-    max-width: 45%;
-    background-color: rgba(0, 0, 0, .1);
-    flex-wrap: wrap;
-    justify-content: space-between;
+.home > header {
+    width: 95%;
+    background-color: var(--white) !important;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, .1);
+    padding: 2.5rem 0;
+}
+
+.home > header ul {
+    width: 100%;
+}
+
+.home > header ul li {
+    border: 2px solid var(--red-medium);
     padding: 1rem;
-    padding-top: 0;
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.home > header ul li > div {
+    display: block;
+    padding: 0;
+    height: fit-content;
+}
+
+.home > header ul li > div {
+    display: block;
+    padding: 0;
+    height: fit-content;
+}
+
+.home > header ul li > .icon {
+    font-size: 3rem;
+    margin-right: 15px;
+    color: var(--red-medium);
+}
+
+.home > header ul li h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--red-medium);
+}
+
+.home > header ul li p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-left: auto;
+    color: rgb(90, 205, 7);
+}
+
+.home > ul {
+    width: 46%;
+    background-color: var(--white);
+    margin: 20px;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, .1);
+}
+
+.home > ul.shop {
+    padding: 1rem 0;
+}
+
+.home > ul.shop > li {
+    margin: 10px;
 }

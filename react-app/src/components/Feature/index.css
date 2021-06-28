@@ -1,0 +1,44 @@
+/* || FEATURE STYLES */
+
+.feature {
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature img {
+    width: 300px;
+    border: 5px solid var(--red-medium);
+}
+
+.feature h2 {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    padding: 5px 8px;
+    background-color: var(--red-medium);
+}
+
+.feature p, .feature span {
+    padding: 8px 5px;
+    width: 100%;
+    background-color: var(--red-medium);
+}
+
+.feature span {
+    background-color: var(--white-main);
+    color: var(--red-medium);
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.feature span:hover {
+    color: var(--white-main);
+    background-color: var(--red-medium);
+}
+
+.feature span a {
+    color: var(--red-medium);
+}

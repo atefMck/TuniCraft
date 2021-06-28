@@ -1,0 +1,35 @@
+.settings {
+  display: flex;
+  flex-direction: row;
+  height: 780px;
+  overflow-y: scroll;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.settings .member_profile {
+  width: 100%;
+}
+
+.settings > ul {
+  margin-top: 20px;
+  background-color: var(--white) !important;
+  box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, .1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--bg-black-medium);
+  padding: 1rem;
+}
+
+.settings > ul li {
+  border-right: 2px solid var(--red-medium);
+  padding-right: 50px;
+}
+
+.settings > ul li:nth-of-type(3) {
+  border-right: none;
+  padding-right: 0;
+}

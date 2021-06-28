@@ -1,6 +1,8 @@
 /* || DASHBOARD HEADER */
 
 .dashboard {
+    position: relative;
+    display: block;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -81,7 +83,7 @@
 .dashboard main nav {
     background-color: var(--bg-black-medium);
     width: 240px;
-    height: 100vh;
+    height: 90vh;
 }
 
 .dashboard main header {
@@ -114,6 +116,21 @@
     align-items: center;
     padding-left: 5px;
     justify-content: space-between;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--white)
+}
+
+.dashboard main nav ul li .side_nav_link {
+    color: var(--white);
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard main nav ul li:hover {
+    background-color: var(--red-medium);
 }
 
 .dashboard main nav ul li :nth-child(1) {
@@ -138,4 +155,9 @@
     display: flex;
     width: 100%;
     flex-direction: column;
+    background-color: rgb(233, 233, 233);
+}
+
+.dashboard main > main > header .icon {
+    font-size: 1.3rem;
 }

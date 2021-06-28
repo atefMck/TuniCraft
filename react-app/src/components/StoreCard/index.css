@@ -1,0 +1,88 @@
+/* || STORECARD STYLES */
+
+.store_card {
+    width: 210px;
+    display: flex;
+    flex-direction: column !important;
+    color: var(--bg-black-medium);
+    border: 2px solid var(--bg-black-medium);
+    transition: .5s;
+    height: 290px;
+}
+
+.store_card:hover {
+    border-color: var(--red-medium);
+}
+
+.store_card:hover {
+    color: var(--red-medium);
+    border-color: var(--red-medium);
+}
+
+.store_card:hover main h3 {
+    color: var(--red-medium);
+    border-color: var(--red-medium);
+}
+
+.store_card:hover img {
+    filter: none;
+}
+
+.store_card div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.store_card div h3 {
+    position: absolute;
+    color: var(--bg-black-medium);
+    border: 2px solid var(--bg-black-medium);
+    padding: .5rem 1rem;
+    transition: .5s;
+}
+
+.store_card div img {
+    height: 160px;
+    width: 100%;
+    margin: 0 auto;
+    filter: blur(5px);
+    z-index: 0;
+    transition: .5s;
+}
+
+.store_card main {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.store_card main > * {
+    width: 100%;
+}
+
+.store_card main span {
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--white-dark);
+}
+
+.store_card main h2 {
+    font-size: 18px;
+}
+
+.store_card main h3 {
+    font-size: 18px;
+    text-align: right;
+    margin-top: -17px;
+    color: var(--bg-black-medium);
+    transition: .5s;
+}
+
+.store_card main p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+

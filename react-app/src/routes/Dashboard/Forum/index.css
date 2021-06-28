@@ -1,0 +1,269 @@
+.forum {
+  display: flex;
+  height: 900px;
+  overflow-y: scroll !important;
+  justify-content: space-between;
+}
+
+.forum ul {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, .1);
+  color: var(--bg-black-medium);
+  margin-bottom: 20px;
+}
+
+.forum > div {
+  width: 100%;
+}
+
+.forum > div header {
+  background-color: var(--red-medium);
+  color: var(--white);
+  height: fit-content;
+  display: block !important;
+  padding: 1rem;
+}
+
+.forum > div header h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.forum > div header p {
+  padding: 0 !important;
+  font-size: .8rem;
+  font-weight: 300;
+  opacity: .6;
+}
+
+.forum_landing {
+  height: fit-content;
+  width: 100%;
+  padding: 1rem;
+  overflow: hidden;
+  padding-bottom: 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.forum_landing > main {
+  width: 78%;
+}
+
+.forum_landing > aside {
+  width: 20%;
+}
+
+.forum_landing > aside div {
+  margin-bottom: 20px;
+}
+
+.forum_landing > aside header {
+  color: var(--white);
+  padding-left: 1rem;
+  display: flex !important;
+}
+
+.forum_landing > aside header h2 {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* Forum Threads Styling */
+
+.forum_threads {
+  padding: 1rem;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  padding-bottom: 10rem;
+}
+
+.forum_threads main > header {
+  display: flex !important;
+}
+
+.forum_threads main > header > div {
+  display: block;
+  height: fit-content;
+  padding: 0;
+}
+
+.forum_threads main > header button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+  padding: .6rem;
+  font-size: 1rem;
+  background-color: lawngreen;
+}
+
+.forum_threads main > header button:hover {
+  background-color: var(--white);
+}
+
+.forum_threads main > header button .icon {
+  font-size: 1.6rem;
+  margin-right: 5px;
+}
+
+/* Forum Post Styling */
+
+.forum_post {
+  height: fit-content;
+  padding: 1rem;
+  overflow: hidden;
+  padding-bottom: 10rem;
+}
+
+.forum_post > div {
+  background-color: var(--white);
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, .1);
+}
+
+.forum_post > div > header {
+  display: flex !important;
+}
+
+.forum_post header div {
+  display: block !important;
+  padding: 0 !important;
+  height: 100% !important;
+}
+
+.forum_post header div:nth-of-type(2) {
+  display: flex !important;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.forum_post header p {
+  font-size: .8rem;
+  font-weight: 300;
+  padding: 0;
+  color:rgba(255, 255, 255, .5);
+}
+
+.forum_post header h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.forum_post article.post_content {
+  padding: 1rem;
+  color: var(--bg-black-medium);
+  display: flex;
+}
+
+.forum_post article.post_content aside .rank {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.forum_post article main img {
+  max-width: 100%;
+}
+
+.forum_post article > aside {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.forum_post article > main {
+  width: 90%;
+}
+
+.forum_post article > aside > img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.forum_post article > aside > h2 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.forum_post article > aside > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forum_post article > aside > div > p {
+  font-size: .8rem;
+}
+
+
+/* Forum Editor Styles */
+
+.forum_editor {
+  height: fit-content;
+  padding: 1rem;
+  overflow: hidden;
+  padding-bottom: 10rem;
+}
+
+.forum_editor > main {
+  min-height: 800px !important;
+}
+
+.forum_editor > main > ul {
+  height: fit-content;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+}
+
+.forum_editor > main > ul > button {
+  padding: 1rem;
+  width: 150px;
+  margin-top: 20px;
+}
+
+.title_input {
+  margin-bottom: 1rem;
+  padding-bottom: 5px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.title_input h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.title_input p {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--red-medium);
+}
+
+.title_input input {
+  width: 99%;
+  height: 25px;
+  font-size: 1.1rem;
+  border: 1px solid rgba(0, 0, 0, .3);
+}
+
+/* Editor Styles */
+
+.editor_wrapper {
+  border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.editor_toolbar {
+  justify-content: space-around!important;
+  border-bottom: 1px solid rgba(0, 0, 0, .3) !important;
+}
+
+.editor_main {
+  min-height: 500px;
+  padding: 1rem !important;
+}
+

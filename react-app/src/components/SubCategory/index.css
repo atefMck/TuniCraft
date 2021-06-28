@@ -1,0 +1,27 @@
+.sub_category {
+  display: flex;
+  padding: .5rem 1rem;
+  align-items: center;
+  height: 70px;
+}
+
+.sub_category span {
+  width: 5%;
+  font-size: 2rem;
+  color: var(--red-medium);
+}
+
+.sub_category h1 {
+  width: 40%;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.sub_category div {
+  width: 20%;
+  text-align: center;
+}
+
+.sub_category h2 {
+  margin-bottom: 5px;
+}

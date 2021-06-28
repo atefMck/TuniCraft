@@ -1,0 +1,36 @@
+.thread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.thread main {
+  width: 60%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.thread main h1 {
+  margin-bottom: 2px;
+}
+
+.thread main p {
+  display: flex;
+  color: var(--red-medium);
+  font-size: .8rem;
+}
+
+.thread main p > p {
+  margin-left: 6px;
+  color: var(--bg-black-medium);
+}
+
+.thread img {
+  width: 48px;
+  border-radius: 50%;
+}
+
+.thread div {
+  width: 10%;
+}

@@ -7,18 +7,23 @@ import icon5 from 'assets/icon_5.png'
 import icon6 from 'assets/icon_6.png'
 import icon7 from 'assets/icon_7.png'
 
-import { Post, Feature, Person } from 'components'
+import { Post, Feature, Person, SubCategory } from 'components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+    faFileAlt
+} from '@fortawesome/free-solid-svg-icons'
 
 const hallOfFamePH = {
-    'Enderman53': ["a", icon1],
-    'CreePer69': ["b", icon2],
-    'Zombify': ["c", icon3],
-    'WitherHeather222': ["d", icon4],
-    'xXCoolKidZombieXx': ["e", icon5],
-    'SpiderfighterX': ["f", icon6],
-    'Skeleboom545': ["g", icon7]
+    'Enderman53': ["a", icon1, "ao"],
+    'CreePer69': ["b", icon2, "bo"],
+    'Zombify': ["c", icon3, "co"],
+    'WitherHeather222': ["d", icon4, "do"],
+    'xXCoolKidZombieXx': ["e", icon5, "eo"],
+    'SpiderfighterX': ["f", icon6, "fo"],
+    'Skeleboom545': ["g", icon7, "go"]
 }
 const featurePH = {
+    id: "dynamic_map_feature",
     title: "Dynamic Map",
     content: "Lorem ipsum dolor sit ametconse ctetur adipiscing elit.",
     thumbnail: PostImg,
@@ -31,9 +36,25 @@ const postPH = {
     image: PostImg,
 }
 
-const feature = <Feature title={featurePH.title} content={featurePH.content} thumbnail={featurePH.thumbnail}/>
-const post = <Post title={postPH.title} date={postPH.date} author={postPH.author} content={postPH.content} image={postPH.image} type={false} />
-const postrev = <Post title={postPH.title} date={postPH.date} author={postPH.author} content={postPH.content} image={postPH.image} type={true} />
-const icons = Object.keys(hallOfFamePH).map((name) => <Person index={hallOfFamePH[name][0]} name={name} avatar={hallOfFamePH[name][1]} />)
+const categoryPH = {
+    icon: <FontAwesomeIcon icon={faFileAlt}/>,
+    name: "News and Announcements",
+    threadCount: 465,
+    messagesCount: 123,
+    creator: "Duma",
+    latestThread: {
+        name: "SkyBlock 0.11.4",
+        lastUpdated: "Today at 4:52 AM"
+    },
+}
 
-export { feature, post, postrev, icons }
+
+const feature = <Feature id={featurePH.id} title={featurePH.title} content={featurePH.content} thumbnail={featurePH.thumbnail}/>
+const postH = <Post postId={"postH"} title={postPH.title} date={postPH.date} author={postPH.author} content={postPH.content} image={postPH.image} type="horizontal" />
+const postHrev = <Post postId={"postHrev"} title={postPH.title} date={postPH.date} author={postPH.author} content={postPH.content} image={postPH.image} type="horizontal reversed" />
+const postV = <Post postId={"post_comp_1"} title={postPH.title} date={postPH.date} author={postPH.author} content={postPH.content} image={postPH.image} type="vertical" />
+const icons = Object.keys(hallOfFamePH).map((name) => <Person key={hallOfFamePH[name][2]} index={hallOfFamePH[name][0]} name={name} avatar={hallOfFamePH[name][1]} />)
+const forumCategory = <SubCategory className="icon" icon={categoryPH.icon} name={categoryPH.name} threadCount={categoryPH.threadCount} messagesCount={categoryPH.messagesCount} creator={categoryPH.creator} latestThread={categoryPH.latestThread} />
+// const member = <MemberOnline memberId="12" avatar={avatar} username="lDuma" about="Server Owner" />
+
+export { feature, postH, postHrev, postV, icons, forumCategory }

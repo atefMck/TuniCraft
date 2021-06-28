@@ -5,9 +5,9 @@ const {
     ACCESS_TOKEN_SECRET = "defaultsecret",
   } = process.env
 
-const generateAccessToken = (uuid) => {
+const generateAccessToken = (id) => {
     const token = jwt.sign({
-            data: uuid
+            id: id
         }, toString(ACCESS_TOKEN_SECRET), { expiresIn: "1h" });
     return token
 }
@@ -17,10 +17,9 @@ const authenticateToken = (req, res, next) => {
     const token = authHeader && authHeader.split(' ')[1]
     if (token == null) return res.sendStatus(401)
 
-    jwt.verify(token, toString(ACCESS_TOKEN_SECRET), (err, user) => {
-        console.log(err)
+    jwt.verify(token, toString(ACCESS_TOKEN_SECRET), (err, id) => {
         if (err) return res.sendStatus(403)
-        req.user = user
+        req.userId = id
         next()
     })
 }

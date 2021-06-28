@@ -16,7 +16,7 @@ button {
 }
 
 a {
-    color: lawngreen;
+    color: var(--bg-black-medium);
     text-decoration: none;
 }
 

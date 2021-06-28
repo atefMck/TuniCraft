@@ -1,0 +1,112 @@
+.form_settings {
+  height: fit-content !important;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_settings h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  border-bottom: 2px solid var(--red-medium);
+  width: fit-content;
+  padding-bottom: 2px;
+}
+
+.form_settings span {
+  background-color: var(--red-medium);
+  width: 80%;
+  height: 2px;
+  margin: 10px auto;
+}
+
+.form_settings div {
+  display: flex;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.form_settings div p {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.form_settings div input {
+  background-color: var(--bg-black-medium);
+  color: var(--white);
+  border: none;
+  height: 25px;
+  width: 230px;
+  border-radius: 0px;
+  transition: .2s;
+  font-size: 1rem;
+  padding: .2rem .4rem;
+}
+
+.form_settings div input:focus {
+  outline: 1px solid var(--red-medium);
+}
+
+.form_settings div input[type="checkbox"] {
+  height: fit-content;
+  width: fit-content;
+}
+
+.form_settings div input::-webkit-file-upload-button {
+  background-color: var(--red-light);
+  color: var(--white);
+  border: none;
+  height: 25px;
+}
+
+.form_settings div input[type="checkbox"]:focus {
+  outline: none;
+}
+
+.form_settings button {
+  padding: 0;
+  height: 31px;
+  margin-left: auto;
+  width: 100px;
+  margin-left: 15px;
+  background-color: var(--bg-black-medium);
+}
+
+.form_settings button:hover {
+  background-color: var(--red-light);
+  color: var(--white);
+}
+
+/* Security settings */
+
+.form_settings.security_settings h2 {
+  margin-top: 10px;
+}
+
+.form_settings.security_settings p {
+  min-width: 200px;
+}
+
+.form_settings.security_settings button {
+  margin-left: auto;
+}
+
+/* Privacy settings */
+
+.form_settings.privacy_settings button, .form_settings.privacy_settings select {
+  margin-left: auto;
+}
+
+.form_settings.privacy_settings aside div > label {
+  width: 200px;
+}
+
+.form_settings.privacy_settings select {
+  height: 30px;
+  width: 120px;
+  color: var(--white);
+  background-color: var(--bg-black-medium);
+  border: none;
+  border-radius: 0;
+}

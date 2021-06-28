@@ -1,0 +1,102 @@
+/* || POST HORIZONTAL STYLES */
+
+.horizontal {
+    margin-bottom: 100px;
+}
+
+.horizontal article {
+    display: flex;
+}
+
+.horizontal article img {
+    width: 350px;
+    height: 200px;
+    border: 5px solid var(--red-medium);
+}
+
+.horizontal article div {
+    padding: 0 8px;
+    position: relative;
+}
+
+.horizontal article div h2 {
+    font-size: 22px;
+}
+
+.horizontal article div span {
+    font-size: 14px;
+    color: var(--white-dark);
+}
+
+.horizontal article div span span {
+    color: var(--red-medium);
+}
+
+.horizontal article div p {
+    margin-top: 10px;
+    color: var(--white-main);
+}
+
+.horizontal article div button {
+    padding: 1rem 2rem;
+    width: fit-content;
+    height: fit-content !important;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: skewX(-10deg);
+}
+
+.horizontal.reversed article {
+    flex-direction: row-reverse;
+}
+
+.horizontal.reversed article div button {
+    left: 0;
+}
+
+/* || POST VERTICAL STYLES */
+.vertical {
+    height: fit-content;
+}
+
+.vertical article {
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical article img {
+    width: 100%;
+    height: 350px;
+}
+
+.vertical article div {
+    padding: 1rem;
+}
+
+.vertical article div h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.vertical article div span {
+    font-size: 14px;
+    color: var(--white-dark);
+}
+
+.vertical article div span span {
+    color: var(--red-medium);
+}
+
+.vertical article div p {
+    font-size: .9rem;
+    padding: .5rem 0;
+}
+
+.vertical article div button {
+    padding: 1rem 2rem;
+    width: fit-content;
+    height: fit-content !important;
+    transform: skewX(-10deg);
+    float: right;
+}
